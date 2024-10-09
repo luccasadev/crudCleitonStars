@@ -7,12 +7,20 @@
 
 .body {
   @apply font-inter;
-  @apply select-none; 
+  @apply select-none;
   @apply bg-slate-300;
   @apply leading-none;
 
 }
 
+.avaliations {
+
+  @apply col;
+  @apply ic;
+  @apply py-[2%];
+
+
+}
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -41,7 +49,7 @@
   @apply bdrSlate100;
   @apply bdr2;
   @apply overflow-y-hidden;
-  @apply text-slate-900; 
+  @apply text-slate-900;
 }
 
 
@@ -77,15 +85,17 @@
   @apply py22;
   @apply px32;
   @apply rd8;
+  @apply grid;
+  @apply grid-cols-2;
   @apply wFull;
   @apply bg-white;
   @apply hvrBgSlate800;
   @apply hvrTxtBgWhite;
 }
 
-.render-avaliation-cards{
-  @apply col; 
-  @apply gap-2; 
+.render-avaliation-cards {
+  @apply col;
+  @apply gap-2;
   @apply text-slate-500;
 }
 
@@ -119,48 +129,6 @@
 }
 
 
-.icon-button {
-  @apply z-40;
-  @apply row;
-  @apply gap6;
-  @apply justify-center;
-  @apply items-center;
-}
-
-.icon-button__abs {
-  @apply abs;
-  @apply w22;
-  @apply h22;
-  @apply bgBlackTransparent;
-  @apply z-10;
-}
-
-
-.icon-button__object {
-  @apply opacity20;
-  @apply h22;
-  @apply w22; 
-  @apply z-0;
-  @apply bg-white;
-}
-
-
-.icon-button__object2 {
-  @apply opacity20;
-  @apply z-0;
-  @apply bg-white;
-}
-
-
-.icon-button__st {
-  @apply cursorPointer;
-  @apply flex;
-  @apply justify-center;
-  @apply items-center;
-  @apply w-full;
-}
-
-
 .constructor-form {
   @apply w90;
   @apply ic;
@@ -172,7 +140,7 @@
   @apply gap6;
 }
 
-.constructor-form__starts{
+.constructor-form__starts {
   @apply col;
   @apply absolute;
   @apply bottom-0;
@@ -183,6 +151,11 @@
 
 }
 
+.constructor-form__starts2 {
+  @apply row;
+  @apply justify-end;
+  @apply items-center;
+}
 
 
 .constructor-form__buttons {
@@ -209,7 +182,8 @@
 /* Estrela selecionada */
 .star.selected,
 .star-half.selected {
-  opacity: 1; /* Estrelas selecionadas são totalmente visíveis */
+  opacity: 1;
+  /* Estrelas selecionadas são totalmente visíveis */
 }
 
 
@@ -342,7 +316,7 @@
 }
 
 .px32 {
-  @apply px-[32px];  
+  @apply px-[32px];
 }
 
 .px25 {

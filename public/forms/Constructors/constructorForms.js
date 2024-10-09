@@ -10,11 +10,9 @@ export const constructorForms = (empresaId) => {
     return `
     <textarea
       class="in ipt"
-      id="${input.name}-${empresaId}"
-      name="${input.name}-${empresaId}"
+      id="${input.name}${empresaId}"
+      name="${input.name}${empresaId}"
       placeholder="${placeholder}"
-      x-model="$store.formsData.user['${input.name}-${empresaId}']"
-      data-empresa-id="${empresaId}"
       rows="3"  
       style="resize: none;"
     ></textarea>

@@ -1,7 +1,7 @@
 import { txtButtons } from "../Extructure/txtValues.js";
 
-export const buttonsForms = () => {
-  // Obtém os botões diretamente do txtButtons
+export const buttonsForms = (empresaId) => {
+  // Obtém os textos dos botões diretamente do txtButtons
   const buttonMap = txtButtons();
 
   // Mapeia os botões para gerar o HTML correspondente
@@ -9,7 +9,7 @@ export const buttonsForms = () => {
     return `
         <button
         class="btn"
-        @click="$store.crudusers.handleClick('button${button.id}')"
+        @click="$store.crudusers.handleClick('button${button.id}', '${empresaId}')"
           type="button"
           id="button${button.id}">
           ${button.text}

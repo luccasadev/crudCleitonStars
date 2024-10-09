@@ -4,7 +4,7 @@ const __filename = imports.fileURLToPath(import.meta.url);
 const __dirname = imports.path.dirname(__filename);
 
 const app = imports.express();
-const port = process.env.PORT || 3000; // Use a porta 8080
+const port = process.env.PORT || 8080; // Use a porta 8080
 const host = '0.0.0.0'; // Certifique-se de que o host é 0.0.0.0
 
 // Middlewares

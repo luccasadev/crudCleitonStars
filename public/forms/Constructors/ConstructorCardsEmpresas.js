@@ -6,7 +6,7 @@ import { RenderStars } from "../Constructors/ConstructorStarts.js"
 
 export const RenderNames = (empresas) => {
   const textarea = constructorForms(empresas.id);
-  const buttons = buttonsForms();
+  const buttons = buttonsForms(empresas.id);
   const renderava = RenderAvaliations(empresas.id);
   const start = RenderStars(empresas.id);
 
@@ -15,21 +15,15 @@ export const RenderNames = (empresas) => {
     class="render-names"
     hx-get="/avaliation/${empresas.id}"
     hx-target="#avaliations-${empresas.id}" 
-    hx-swap="innerHTML"
-    x-data="{ count: ${empresas.id} }"
-    @click="() => { 
-      $store.reload.handleClick(count); 
-      $store.formsData.loadForUpdate({});
-    }" >
-
+    hx-swap="innerHTML">
 
 
   <div class="render-names-group"
-  @click="() => {$store.renderNamesStore.toggleExpand(count);}"
-  :class="{ 'grid-cols-2': $store.renderNamesStore.isExpanded(count), 'grid-cols-1': !$store.renderNamesStore.isExpanded(count) }">
+  @click="() => {$store.renderNamesStore.toggleExpand(${empresas.id});}"
+  :class="{ 'grid-cols-2': $store.renderNamesStore.isExpanded(${empresas.id}), 'grid-cols-1': !$store.renderNamesStore.isExpanded(${empresas.id}) }">
 
     <div class="render-card"
-      :class="($store.reload.activeCount === count ? 'bg-slate-800' : 'bg-slate-900')">
+      :class="($store.reload.active${empresas.id} === ${empresas.id} ? 'bg-slate-800' : 'bg-slate-900')">
         <!-- Nome da empresa -->
         <div class="render-names__name">
           ${empresas.nome}
@@ -60,7 +54,7 @@ export const RenderNames = (empresas) => {
     <div 
       class="relative z-50"
       @click.stop
-      :style="$store.renderNamesStore.isExpanded(count) ? 'display:block' : 'display:none'">
+      :style="$store.renderNamesStore.isExpanded(${empresas.id}) ? 'display:block' : 'display:none'">
         ${textarea} 
 
       <div class="constructor-form__starts">
@@ -68,8 +62,13 @@ export const RenderNames = (empresas) => {
       </div>
 
       <div class="constructor-form__buttons"
-      
-         @click="() => {$store.renderNamesStore.toggleExpand(count);}"> 
+        hx-get="/avaliation/${empresas.id}"
+        hx-target="#avaliations-${empresas.id}" 
+        hx-swap="innerHTML"
+        @click="() => {
+        $store.renderNamesStore.toggleExpand(${empresas.id});
+        $store.renderNamesStore.toggleExpand(${empresas.id});
+        }"> 
         ${buttons} 
       </div>
     </div>
@@ -78,12 +77,11 @@ export const RenderNames = (empresas) => {
 
 
 
-  <div 
-  @click.stop
-   :style="$store.renderNamesStore.isExpanded(count) ? 'display:block' : 'display:none'">
+  <div
+  :style="$store.renderNamesStore.isExpanded(${empresas.id}) ? 'display:block' : 'display:none'">
 
-   ${renderava}
-  
+    ${renderava}
+    
   </div>
 
   </div>

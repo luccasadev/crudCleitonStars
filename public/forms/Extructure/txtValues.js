@@ -1,7 +1,7 @@
 export function txtinput() {
   // Mapeia diretamente o ID e o nome do campo
   const inputMap = [
-    { id: 1, name: "nome" },
+    { id: 1, name: "avaliacao" },
   ];
 
   return inputMap; // Retorna o array completo de inputs
