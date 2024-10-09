@@ -7,22 +7,17 @@ Este projeto utiliza as seguintes tecnologias:
 - [Sequelize](https://sequelize.org/)
 - [SQLite](https://www.sqlite.org/)
 
-- [Webpack](https://webpack.js.org/)
 
 ## Dependências
 Este projeto possui as seguintes dependências:
 
 ### Dependências
-- `tailwindcss`: ^0.5.9
-- `axios`: ^1.7.7
-- `body-parser`: ^1.20.3
+- `cheerio`: ^1.0.0
 - `cors`: ^2.8.5
-- `moment`: ^2.30.1
+- `date-fns`: ^4.1.0
+- `express`: *
 - `sequelize`: ^6.37.3
 - `sqlite3`: ^5.1.7
-
-### DevDependencies
-- `tailwindcss`: ^3.4.12
 
 
 ## Para iniciar o projeto
@@ -32,20 +27,20 @@ Este projeto possui as seguintes dependências:
     npm install
     ```
 
-2. **Navegue até a pasta server**:
+2. **Execute o servidor**:
     ```bash
-    cd server
+    npm run start
     ```
 
-3. **Execute o servidor**:
-    ```bash
-    node server.js --watch
-    ```
+3. **Caso altere algo no arquivo css deve-se executar o CLI do tailwindcss**:
+   ```bash
+   npx tailwindcss -i ./css/inp.css -o ./css/out.css --watch
+   ```
 
 ## Uso
-Uma vez que o servidor está em execução, você pode acessar a aplicação em [http://localhost:3000](http://localhost:3000). Aqui estão algumas funcionalidades que você pode explorar:
+Uma vez que o servidor está em execução, você pode acessar a aplicação em [http://localhost:8080](http://localhost:8080). Aqui estão algumas funcionalidades que você pode explorar:
 
-- [Listar itens](#)
-- [Adicionar itens](#)
-- [Editar itens](#)
-- [Excluir itens](#)
+- [Listar pessoas](#)
+- [Adicionar pessoas](#)
+- [Editar pessoas](#)
+- [Excluir pessoas](#)

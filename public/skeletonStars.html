@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de ALunos</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script
+      src="https://unpkg.com/htmx.org@2.0.1"
+      integrity="sha384-QWGpdj554B4ETpJJC9z+ZHJcA/i59TyjxEPXiiUgN2WmTyV5OEZWCD6gQhgkdpB/"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="/css/out.css" rel="stylesheet" />
+
+
+    <script defer  src="./forms/ReativeAlpine/crudAlpine.js"></script>
+
+
+
+    <style>
+      .star {
+          width: 50px;
+          height: 50px;
+          cursor: pointer;
+      }
+      .full {
+          fill: gold;
+      }
+      .half {
+          fill: url(#half-gradient);
+      }
+      .empty {
+          fill: lightgray;
+      }
+  </style>
+
+
+  </head>
+  <body class="body">
+
+    <div x-data="ratingComponent()" class="flex space-x-1">
+      <template x-for="(star, index) in 5" :key="index">
+          <svg
+              @mousemove="setRating(index + 1, $event)"
+              @mouseleave="resetRating()"
+              @click="confirmRating(index + 1)"
+              :class="getStarClass(index + 1)"
+              class="star"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+          >
+              <!-- Definição do gradiente para meia estrela -->
+              <defs>
+                  <linearGradient id="half-gradient">
+                      <stop offset="50%" stop-color="gold" />
+                      <stop offset="50%" stop-color="lightgray" />
+                  </linearGradient>
+              </defs>
+              <!-- Desenho da estrela -->
+              <path d="M12 .587l3.668 7.568L24 9.423l-6 5.845 1.42 8.332L12 18.897l-7.42 4.703L6 15.268 0 9.423l8.332-1.268z"/>
+          </svg>
+      </template>
+  </div>
+
+
+
+  <script>
+
+</script>
+
+
+</body>
+
+</html>
+

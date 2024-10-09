@@ -1,0 +1,407 @@
+/* input.css */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+.body {
+  @apply font-inter;
+  @apply select-none; 
+  @apply bg-slate-300;
+  @apply leading-none;
+
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.btn {
+  @apply rd8;
+  @apply row;
+  @apply textWhite;
+  @apply reg22;
+  @apply jcIC;
+  @apply px22;
+  @apply py10;
+  @apply cursorPointer;
+  @apply bgSlate900;
+  @apply hvrBgSlate800;
+}
+
+
+.ipt {
+  @apply rd8;
+  @apply row;
+  @apply reg16;
+  @apply px22;
+  @apply py-4;
+  @apply wFull;
+  @apply hFull;
+  @apply bdrSlate100;
+  @apply bdr2;
+  @apply overflow-y-hidden;
+  @apply text-slate-900; 
+}
+
+
+.render-names {
+  @apply gap-2;
+  @apply col;
+  @apply cursorPointer;
+  @apply min-h-[150px];
+  @apply z-0;
+}
+
+
+.render-names-group {
+  @apply gap-2;
+  @apply grid;
+  @apply grid-cols-1;
+  @apply cursorPointer;
+  @apply h-[150px];
+  @apply z-0;
+}
+
+.render-card {
+  @apply py22;
+  @apply px32;
+  @apply rd8;
+  @apply grid;
+  @apply grid-cols-2;
+  @apply hvrBgSlate800;
+}
+
+
+.render-avaliation {
+  @apply py22;
+  @apply px32;
+  @apply rd8;
+  @apply wFull;
+  @apply bg-white;
+  @apply hvrBgSlate800;
+  @apply hvrTxtBgWhite;
+}
+
+.render-avaliation-cards{
+  @apply col; 
+  @apply gap-2; 
+  @apply text-slate-500;
+}
+
+
+
+.render-names__name {
+  @apply textWhite;
+  @apply col;
+  @apply reg22;
+  @apply jcIC;
+  @apply w-[80px];
+  @apply leading-[25px];
+}
+
+
+.render-names__info {
+  @apply textAfabab;
+  @apply reg12;
+  @apply grid;
+  @apply gap2;
+}
+
+.render-pin {
+  @apply textAfabab;
+  @apply row;
+  @apply wFull;
+  @apply items-start;
+  @apply text-justify;
+  @apply tracking-wide;
+  @apply leading-[18px];
+}
+
+
+.icon-button {
+  @apply z-40;
+  @apply row;
+  @apply gap6;
+  @apply justify-center;
+  @apply items-center;
+}
+
+.icon-button__abs {
+  @apply abs;
+  @apply w22;
+  @apply h22;
+  @apply bgBlackTransparent;
+  @apply z-10;
+}
+
+
+.icon-button__object {
+  @apply opacity20;
+  @apply h22;
+  @apply w22; 
+  @apply z-0;
+  @apply bg-white;
+}
+
+
+.icon-button__object2 {
+  @apply opacity20;
+  @apply z-0;
+  @apply bg-white;
+}
+
+
+.icon-button__st {
+  @apply cursorPointer;
+  @apply flex;
+  @apply justify-center;
+  @apply items-center;
+  @apply w-full;
+}
+
+
+.constructor-form {
+  @apply w90;
+  @apply ic;
+  @apply px25;
+}
+
+.constructor-form__grid {
+  @apply col;
+  @apply gap6;
+}
+
+.constructor-form__starts{
+  @apply col;
+  @apply absolute;
+  @apply bottom-0;
+  @apply justify-end;
+  @apply left-0;
+  @apply px-4;
+  @apply py-4;
+
+}
+
+
+
+.constructor-form__buttons {
+  @apply col;
+  @apply gap2;
+  @apply absolute;
+  @apply bottom-0;
+  @apply right-0;
+  @apply justify-center;
+  @apply px-4;
+  @apply hFull;
+}
+
+.constructor-form__names {
+  @apply textWhite;
+  @apply grid;
+  @apply grid-cols-1;
+  @apply flex-grow;
+  @apply gap4;
+}
+
+
+
+/* Estrela selecionada */
+.star.selected,
+.star-half.selected {
+  opacity: 1; /* Estrelas selecionadas são totalmente visíveis */
+}
+
+
+
+/*Fragmentos*/
+
+
+/* Fragmentos de bordas */
+.rd8 {
+  @apply rounded-[8px];
+}
+
+/* Fragmentos de texto */
+
+.reg12 {
+  @apply text-[12px] font-normal;
+}
+
+
+.reg14 {
+  @apply text-[14px] font-normal;
+}
+
+.reg16 {
+  @apply text-[16px] font-normal;
+}
+
+.reg22 {
+  @apply text-[22px] font-normal;
+}
+
+
+/* Fragmentos de cores */
+.textWhite {
+  @apply text-white;
+}
+
+.bgSlate900 {
+  @apply bg-slate-900;
+}
+
+.hvrBgSlate800 {
+  @apply hover:bg-slate-800;
+}
+
+
+.hvrTxtBgWhite {
+  @apply hover:text-white;
+}
+
+
+.bdrSlate100 {
+  @apply border-slate-100;
+}
+
+.bdr2 {
+  @apply border-2;
+}
+
+.textAfabab {
+  @apply text-[#afabab];
+}
+
+
+.bgBlackTransparent {
+
+  @apply bg-black bg-transparent;
+
+}
+
+/* Fragmentos de flex */
+.row {
+  @apply flex;
+  @apply flex-row;
+}
+
+.col {
+  @apply flex;
+  @apply flex-col;
+}
+
+
+.abs {
+
+  @apply absolute;
+
+}
+
+
+/* Fragmentos de alinhamento */
+.jcIC {
+  @apply justify-center items-center;
+}
+
+.ic {
+  @apply items-center;
+}
+
+/* Fragmentos de tamanhos */
+.h50 {
+  @apply h-[50px];
+}
+
+.h22 {
+  @apply h-[22px];
+}
+
+.w22 {
+  @apply w-[22px];
+}
+
+.w90 {
+  @apply w-[90%];
+}
+
+.wFull {
+  @apply w-full;
+}
+
+.hFull {
+  @apply h-full;
+}
+
+.px6 {
+  @apply px-[6px];
+}
+
+.px22 {
+  @apply px-[22px];
+}
+
+.px32 {
+  @apply px-[32px];  
+}
+
+.px25 {
+  @apply px-[25px];
+}
+
+.py8 {
+  @apply py-[8px];
+}
+
+.py10 {
+  @apply py-[10px];
+}
+
+.py22 {
+  @apply py-[22px];
+}
+
+.gap10 {
+  @apply gap-10;
+}
+
+.gap6 {
+  @apply gap-6;
+}
+
+.gap4 {
+  @apply gap-4;
+}
+
+.gap2 {
+  @apply gap-2;
+}
+
+.grid-cols-minmax {
+  grid-template-columns: 1fr auto minmax(80px, 80px);
+}
+
+
+/* Fragmentos de posicionamento */
+.mlAuto {
+  @apply ml-auto;
+}
+
+/* Fragmentos de opacidade */
+.opacity20 {
+  @apply opacity-20;
+}
+
+/* Fragmentos de cursor */
+.cursorPointer {
+  @apply cursor-pointer;
+}
+
+/* Fragmentos de espaçamento */
+.tracking08em {
+  @apply tracking-[0.08em];
+}
+
+.gap1px {
+  @apply gap-[1px];
+}
